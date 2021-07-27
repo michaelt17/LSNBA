@@ -1,3 +1,4 @@
+// Adapted from https://www.digitalocean.com/community/tutorials/react-tabs-component
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Tab from './Tab';

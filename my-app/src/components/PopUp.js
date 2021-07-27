@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Answer from './Answer.js';
 
-export default class PopUp extends Component {
+class PopUp extends Component {
+
   handleClick = () => {
     this.props.toggle();
   };
@@ -16,10 +18,12 @@ export default class PopUp extends Component {
             <p className="question">{this.props.funInfo.question}</p>
           </div>
           <div className="answersHolder">
-            {this.props.funInfo.answers.map(answer => <p className="answer">{answer}</p>)}
+            {this.props.funInfo.answers.map(answer => <Answer answerProps={answer} />)}
           </div>
         </div>
       </div>
     );
   }
 }
+
+export default PopUp

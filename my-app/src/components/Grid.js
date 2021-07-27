@@ -7,47 +7,47 @@ let funInfo = [
     {
         value: "Family",
         question: "My Dad was born and raised in which Latin American Country?",
-        answers:["A) Argentina","B) Panama","C) Mexico"]
+        answers:[["A) Argentina","false"],["B) Panama","false"],["C) Mexico","true"]]
     },
     {
         value: "Travel",
         question: "How Many US states have I been to?",
-        answers:["A) 8","B) 25","C) 45"]
+        answers:[["A) 8","false"],["B) 25","true"],["C) 45","false"]]
     },
     {
         value: "Sports",
         question: "My vertical jump at my peak was approximately how many inches?",
-        answers:["A) 32","B) 36","C) 40"]
+        answers:[["A) 32","false"],["B) 36","false"],["C) 40","true"]]
     },
     {
         value: "Family",
         question: "Both of my grandmothers were what profession?",
-        answers:["A) Artists","B) Real estate agents","C) Writers"]
+        answers:[["A) Artists","true"],["B) Real estate agents","false"],["C) Writers","false"]]
     },
     {
         value: "Travel",
         question: "What US State do I believe is the most overrated?",
-        answers:["A) New York","B) California","C) Hawaii"]
+        answers:[["A) New York","false"],["B) California","false"],["C) Hawaii","true"]]
     },
     {
         value: "School",
         question: "My least favorite school subject growing up was?",
-        answers:["A) English","B) History","C) Gym"]
+        answers:[["A) English","true"],["B) History","false"],["C) Gym","false"]]
     },
     {
         value: "Family",
         question: "How do you spell my mom's unusual name (pronounced like Elise)?",
-        answers:["A) Ilyce","B) Ileece","C) Elysse"]
+        answers:[["A) Ilyce","true"],["B) Ileece","false"],["C) Elysse","false"]]
     },
     {
         value: "Travel",
         question: "What is my favorite trip that I've ever taken?",
-        answers:["A) Japan & South Korea","B) Italy & Greece","C) Southern Africa"]
+        answers:[["A) Japan & South Korea","true"],["B) Italy & Greece","false"],["C) Southern Africa","false"]]
     },
     {
         value: "Food",
         question: "What is my go to weeknight meal to make for myself?",
-        answers:["A) Buddaejjigae","B) Thai Curry","C) Pizza"]
+        answers:[["A) Budaejjigae","false"],["B) Thai Curry","true"],["C) Pizza","false"]]
     }
 ];
 
