@@ -9,7 +9,6 @@ function App() {
         <h1>Michael's Coding Project for Liquid Studios</h1>
       </header>
       <div>
-        <h1>Inserting Tabs Here</h1>
         <Tabs> 
 
           <div label="NBA Machine Learning"> 
@@ -21,7 +20,6 @@ function App() {
           </div> 
 
           <div label="About Michael"> 
-            This tab will have Jeopardy to learn more about Michael!
             <Grid/>
           </div> 
 

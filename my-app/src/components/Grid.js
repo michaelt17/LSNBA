@@ -57,16 +57,6 @@ class Grid extends Component {
         return (
             <div className="grid">
                 {funInfo.map(tidbit => <Tile tidbit={tidbit}/>)}
-                {/* {this.renderTile()} */}
-                {/* <Tile funInfo={} value="Family"/>
-                <Tile value="Travel"/>
-                <Tile value="Fun"/>
-                <Tile value="Family"/>
-                <Tile value="Travel"/>
-                <Tile value="Fun"/>
-                <Tile value="Family"/>
-                <Tile value="Travel"/>
-                <Tile value="Fun"/> */}
             </div>
         );
     }
