@@ -6,7 +6,8 @@ import PopUp from "./PopUp";
 
 class Tile extends Component {
     state = {
-        seen: false
+        seen: false,
+        className: "tile beforeGuess"
       };
     
       togglePop = () => {
@@ -14,15 +15,24 @@ class Tile extends Component {
           seen: !this.state.seen
         });
       };
+
+    handleUpdateTile = (newClass) => {
+        this.setState({
+            className: newClass
+        });
+    }
       
     render(){
         return (
             <div>
-                <button className="tile" onClick={() => this.togglePop()}>
+                <button className={this.state.className} onClick={() => this.togglePop()}>
                     {this.props.tidbit.value}
                 </button>
-                {this.state.seen ? <PopUp funInfo={{question:this.props.tidbit.question,
-                                                    answers:this.props.tidbit.answers}} toggle={this.togglePop} /> : null}
+                {this.state.seen ? <PopUp handleUpdateTile={this.handleUpdateTile}
+                                          handleUpdateScore={this.props.handleUpdateScore}
+                                          funInfo={{question:this.props.tidbit.question,
+                                                    answers:this.props.tidbit.answers}} 
+                                          toggle={this.togglePop} /> : null}
             </div>
         );
     }

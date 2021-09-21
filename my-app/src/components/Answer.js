@@ -13,17 +13,28 @@ class Answer extends Component {
 }
 
   handleClick() {
-    console.log(this);
-    if (this.props.answerProps[1] == "true") {
-      console.log("this is true");
+    if (this.props.answerProps[1] == "true" && this.state.answerColor == 'gold') {
       this.setState({
         answerColor : "LawnGreen"
     });
+      if (this.props.handleAnswerCount("check") == 0){
+        console.log("hello")
+        this.props.handleUpdateScore(1);
+        this.props.handleUpdateTile("tile zeroWrong");
+      }else if (this.props.handleAnswerCount("check") == 1){
+        console.log("hi");
+        this.props.handleUpdateScore(.5);
+        this.props.handleUpdateTile("tile oneWrong");
+      } else {
+        this.props.handleUpdateTile("tile twoWrong");
+      }
     } else {
-      console.log("this is false");
-      this.setState({
-        answerColor : "red"
-    });
+      if (this.props.answerProps[1] != "true"){
+        this.setState({
+          answerColor : "red",
+        });
+        this.props.handleAnswerCount("update");
+      }
     }
     
   }

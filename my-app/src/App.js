@@ -1,6 +1,8 @@
 import './App.css';
 import Tabs from "./components/Tabs"; 
-import Grid from "./components/Grid"
+import Grid from "./components/Grid";
+import LeaderBoard from './components/LeaderBoard';
+import MachineLearning from './components/MachineLearning';
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         <Tabs> 
 
           <div label="NBA Machine Learning"> 
-            This tab will eventually host the results of my machine learning!
+            <MachineLearning/>
           </div> 
 
           <div label="NBA Data Exploration"> 
@@ -21,6 +23,7 @@ function App() {
 
           <div label="About Michael"> 
             <Grid/>
+            <LeaderBoard/>
           </div> 
 
         </Tabs> 

@@ -52,11 +52,29 @@ let funInfo = [
 ];
 
 class Grid extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          score: '0'
+        };
+    }
+
+    handleUpdateScore = (num) => {
+        this.setState({
+            score: Number(this.state.score) + num
+        });
+    }
 
     render() {
         return (
-            <div className="grid">
-                {funInfo.map(tidbit => <Tile tidbit={tidbit}/>)}
+            <div>
+                <div className="grid">
+                    {funInfo.map(tidbit => <Tile handleUpdateScore={this.handleUpdateScore} tidbit={tidbit}/>)}
+                    <div id="scoreHolder">
+                        Your score is: {this.state.score}
+                    </div>
+                </div>
             </div>
         );
     }

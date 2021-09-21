@@ -2,6 +2,22 @@ import React, { Component } from "react";
 import Answer from './Answer.js';
 
 class PopUp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      answerCount: 0
+    };
+  }
+
+  handleAnswerCount = (action) => {
+    if (action == "check"){
+      return this.state.answerCount;
+    } else {
+      this.setState({answerCount:this.state.answerCount+1});
+    }
+    
+  };
 
   handleClick = () => {
     this.props.toggle();
@@ -18,7 +34,11 @@ class PopUp extends Component {
             <p className="question">{this.props.funInfo.question}</p>
           </div>
           <div className="answersHolder">
-            {this.props.funInfo.answers.map(answer => <Answer answerProps={answer} />)}
+            {this.props.funInfo.answers.map(answer => 
+            <Answer handleAnswerCount={this.handleAnswerCount}
+                    handleUpdateScore={this.props.handleUpdateScore}
+                    handleUpdateTile={this.props.handleUpdateTile}
+                    answerProps={answer} />)}
           </div>
         </div>
       </div>

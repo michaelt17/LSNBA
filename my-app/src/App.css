@@ -31,7 +31,6 @@
 }
 
 .tile {
-  background-image: linear-gradient(to top, rgb(27, 0, 148), blue);
   border-width: 1px;
   border-color: black;
   color: gold;
@@ -45,7 +44,23 @@
   float: left;
 }
 
-.tile:hover {
+.beforeGuess{
+  background-image: linear-gradient(to top, rgb(27, 0, 148), blue);
+}
+
+.zeroWrong {
+  background-image: linear-gradient(to top, rgb(4, 124, 0), lawngreen);
+}
+
+.oneWrong {
+  background-image: linear-gradient(to top, rgb(180, 102, 0), orange);
+}
+
+.twoWrong {
+  background-image: linear-gradient(to top, rgb(148, 0, 0), red);
+}
+
+.beforeGuess:hover {
   background-image: linear-gradient(to top, rgb(0, 93, 214), blue);
 }
 
@@ -90,4 +105,10 @@
 .answer:hover {
   cursor: pointer;
   -webkit-transform: scale(1.5);
+}
+
+#leaderBoard{
+  height: 600px;
+  width: 400px;
+  float: right;
 }
