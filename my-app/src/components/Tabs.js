@@ -47,7 +47,7 @@ class Tabs extends Component {
             );
           })}
         </ol>
-        <div className="tab-content" style={{display:"flex",flexWrap:"wrap"}}>
+        <div className="tab-content">
           {children.map((child) => {
             if (child.props.label !== activeTab){
               return undefined;

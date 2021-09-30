@@ -112,3 +112,23 @@
   width: 400px;
   float: right;
 }
+
+.grouping{
+  width: 150px;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid black;
+}
+
+.groupHeader{
+  margin-top: 0px;
+}
+
+.player-list{
+  padding: 0;
+  border: black;
+}
+
+.player-list-item{
+  text-align: center;
+  margin: 14px 0px 14px 0px;
+}
